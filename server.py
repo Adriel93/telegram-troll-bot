@@ -6,19 +6,18 @@ from bot.bot_logic import register_handlers
 
 TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 
+# Crear aplicación de telegram sin Updater
+telegram_app = ApplicationBuilder().token(TOKEN).build()
+register_handlers(telegram_app)
+
 app = FastAPI()
-
-tg_app = ApplicationBuilder().token(TOKEN).build()
-register_handlers(tg_app)
-
 
 @app.post("/webhook")
 async def webhook(request: Request):
     data = await request.json()
-    update = Update.de_json(data, tg_app.bot)
-    await tg_app.process_update(update)
+    update = Update.de_json(data, telegram_app.bot)
+    await telegram_app.process_update(update)
     return {"ok": True}
-
 
 @app.get("/")
 def home():

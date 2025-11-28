@@ -1,17 +1,17 @@
-# Telegram Bot + Vercel + Gemini + Upstash Redis
+# Bot Cristiano Troll (Telegram + Gemini + Vercel)
 
-## 🚀 Variables de Entorno (obligatorias)
+## Deploy en Vercel
 
-- TELEGRAM_BOT_TOKEN=
-- GEMINI_API_KEY=
-- UPSTASH_REDIS_URL=
-- UPSTASH_REDIS_TOKEN=
+1. Subir a GitHub.
+2. En https://vercel.com crear nuevo proyecto.
+3. Añadir variables de entorno:
 
-## 🔗 Webhook
+- TELEGRAM_BOT_TOKEN
+- GEMINI_API_KEY
+- UPSTASH_REDIS_URL
+- UPSTASH_REDIS_TOKEN
 
-Una vez desplegado:
+4. Deploy.
 
-https://YOUR-PROJECT.vercel.app/api/bot
-
-Configura Telegram:
+## Configurar Webhook
 

@@ -1,9 +1,15 @@
 {
   "version": 2,
-  "builds": [
-    { "src": "api/bot.js", "use": "@vercel/node" }
-  ],
+  "functions": {
+    "api/webhook.py": {
+      "runtime": "python3.11"
+    }
+  },
   "routes": [
-    { "src": "/.*", "dest": "api/bot.js" }
+    {
+      "src": "/webhook",
+      "dest": "/api/webhook.py",
+      "methods": ["POST"]
+    }
   ]
 }

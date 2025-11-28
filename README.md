@@ -3,7 +3,7 @@
 ## Deploy en Vercel
 
 1. Subir a GitHub.
-2. En https://vercel.com crear nuevo proyecto.
+2. En https://render.com crear nuevo proyecto.
 3. Añadir variables de entorno:
 
 - TELEGRAM_BOT_TOKEN
